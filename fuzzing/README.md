@@ -16,15 +16,6 @@ layout:
 
 ## Effective Fuzzing
 
-All of the following could result in interesting responses:&#x20;
-
-1. Sending an exceptionally large number when a small number is expected
-2. Sending database queries, system commands, and other code&#x20;
-3. Sending a string of letters when a number is expected&#x20;
-4. Sending a large string of letters when a small string is expected&#x20;
-5. Sending various symbols (-\_!@#$%^&\*();':''|,./?>)&#x20;
-6. Sending characters from unexpected languages (漢, さ, Ж, Ѫ, Ѭ, Ѧ, Ѩ, Ѯ)
-
 ### Targeted fuzzing
 
 Targeted fuzzing payloads are aimed at provoking a response from specific technologies and types of vulnerabilities.
@@ -71,7 +62,7 @@ Note that instead of 40 instances of A or 9, you could write payloads consisting
 
 You’ll typically be analyzing hundreds or thousands of responses, not just two or three. Therefore, you need to filter your responses to detect anomalies.
 
-For example, if you sent input like \~'!@#$%^&\*()-\_+ to an endpoint that improperly handles it, you could receive an error.
+For example, if you send input like `~'!@#$%^&*()-_+` to an endpoint that improperly handles it, you could receive an error.
 
 if you issue 100 API requests and 98 of those result in an HTTP 200 response code with a similar response size, you can consider those requests to be your baseline. Also, examine a few of the baseline responses to get a sense of their content. Once you know that the baseline responses have been properly handled, review the two anomalous responses.
 
@@ -95,8 +86,6 @@ Create a Postman environment in which to save a set of fuzzing variables. This l
 
 ### Fuzzing Deep with Wfuzz
 
-
-
 ```
 wfuzz -z file,/home/hapihacker/big-list-of-naughty-strings.txt -H "Content-Type: application/
 json" -H "x-access-token: [...]" -p 127.0.0.1:8080 --hc 400 -X PUT -d "{
@@ -111,7 +100,7 @@ json" -H "x-access-token: [...]" -p 127.0.0.1:8080 --hc 400 -X PUT -d "{
 
 ### Fuzzing Wide for Improper Assets Management
 
-Improper assets management vulnerabilities arise when an organization exposes APIs that are either retired, in a test environment, or still in devel- opment. In any of these cases, there is a good chance the API has fewer protections than its supported production counterparts. Improper assets management might affect only a single endpoint or request, so it’s often useful to fuzz wide to test if improper assets management exists for any request across an API.
+Improper assets management vulnerabilities arise when an organization exposes APIs that are either retired, in a test environment, or still in development. In any of these cases, there is a good chance the API has fewer protections than its supported production counterparts. Improper assets management might affect only a single endpoint or request, so it’s often useful to fuzz wide to test if improper assets management exists for any request across an API.
 
 Also, check any sort of changelog or GitHub repository. A changelog that says something along the lines of “resolved broken object level authorization vulnerability in v3” will make finding an endpoint still using v1 or v2 all the sweeter.
 
@@ -132,13 +121,13 @@ Tricking the server’s input sanitization code into processing a payload it sho
 
 First, try sending something that takes the form of the restricted field (if it’s an email field, include a valid-looking email), add a null byte, and then add another payload position for fuzzing payloads to be inserted. Here’s an example:&#x20;
 
-"user": "a@b.com%00§test§"&#x20;
+`"user": "a@b.com%00§test§"`&#x20;
 
 Instead of a null byte, try sending a pipe (|), quotes, spaces, and other escape symbols. Better yet, there are enough possible symbols to send that you could add a second payload position for typical escape characters, like this:
 
-"user": "a@b.com§escape§§test§"
+`"user": "a@b.com§escape§§test§"`
 
-Use a set of potential escape symbols for the §escape§ payload and the payload you want to execute as the §test§. To perform this test, use Burp Suite’s cluster bomb attack, which will cycle through multiple payload lists and attempt every other payload against it
+Use a set of potential escape symbols for the `§escape§` payload and the payload you want to execute as the `§test§`. To perform this test, use Burp Suite’s cluster bomb attack, which will cycle through multiple payload lists and attempt every other payload against it
 
 ## Fuzzing for Directory Traversal
 
