@@ -32,6 +32,7 @@
   * [Labs](attacking-api-auth/labs.md)
 * [Fuzzing](fuzzing/README.md)
   * [Effective Fuzzing](fuzzing/effective-fuzzing.md)
+  * [Fuzzing Wide and Deep](fuzzing/fuzzing-wide-and-deep.md)
 * [AWS](aws.md)
 * [Misc](misc/README.md)
   * [Auth type](misc/auth-type.md)

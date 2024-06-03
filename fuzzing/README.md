@@ -14,50 +14,6 @@ layout:
 
 # Fuzzing
 
-## Effective Fuzzing
-
-### Targeted fuzzing
-
-Targeted fuzzing payloads are aimed at provoking a response from specific technologies and types of vulnerabilities.
-
-Targeted fuzzing payloads are more useful once you know the technologies being used. If you’re sending SQL fuzzing payloads to an API that leverages only NoSQL databases, your testing won’t be as effective.
-
-Targeted fuzzing payload types might include API object or variable names, cross-site scripting (XSS) payloads, directories, file extensions, HTTP request methods, JSON or XML data, SQL or No SQL commands, or commands for particular operating systems.
-
-Sources:&#x20;
-
-SecList: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)\
-its big-list-of-naughty-strings.txt wordlist is excellent at causing useful responses.
-
-FuzzDB: [https://github.com/fuzzdb-project/fuzzdb](https://github.com/fuzzdb-project/fuzzdb)
-
-Wfuzz: [https://github.com/xmendez/wfuzz](https://github.com/xmendez/wfuzz) includes a great list that combines several targeted payloads in their injection directory, called All\_attack.txt.\
-\
-Additionally, you can always quickly and easily create your own generic fuzzing payload list. In a text file, combine symbols, numbers, and characters to create each payload as line-separated entries, like this:&#x20;
-
-```
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-9999999999999999999999999999999999999999
-~'!@#$%^&*()-_+
-{}[]|:''; '<>?,./
-%00 
-0x00 
-$ne 
-%24ne 
-$gt 
-%24gt 
-|whoami
-'' '
-OR 1=1-- -
-'' ''''''
-漢, さ, Ж, Ѫ, Ѭ, Ѧ, Ѩ, Ѯ
-😀 😃 😄 😁 😆 
-```
-
-***
-
-Note that instead of 40 instances of A or 9, you could write payloads consisting of hundreds of them. Using a small list like this as a fuzzing payload can cause all sorts of useful and interesting responses from an API.
-
 ## Detecting Anomalies
 
 You’ll typically be analyzing hundreds or thousands of responses, not just two or three. Therefore, you need to filter your responses to detect anomalies.
