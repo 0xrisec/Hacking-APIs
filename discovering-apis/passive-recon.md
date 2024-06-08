@@ -106,9 +106,14 @@ The Issues tab is a space where developers can track bugs, tasks, and feature re
 
 The Pull Requests tab is a place that allows developers to collaborate on changes to the code. If you review these proposed changes, you might sometimes get lucky and find an API exposure that is in the process of being resolved.
 
-### CRTSH
+### AssetFinder
 
-{% embed url="https://crt.sh/?q=" %}
+&#x20;[https://github.com/tomnomnom/assetfinder](https://github.com/tomnomnom/assetfinder)
+
+## Github dorks
+
+[https://github.com/techgaun/github-dorks](https://github.com/techgaun/github-dorks)\
+
 
 [https://www.zoomeye.hk/](https://www.zoomeye.hk/)\
 [https://viz.greynoise.io](https://viz.greynoise.io)\

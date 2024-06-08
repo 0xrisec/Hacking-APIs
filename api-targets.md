@@ -64,6 +64,7 @@ If you're looking to elevate your API hacking skills with more complex challenge
 * **Vulnerable GraphQL API** by AidanNoll from CarveSystems: For those interested in GraphQL, [Vulnerable GraphQL API](https://github.com/CarveSystems/vulnerable-graphql-api) presents a unique set of challenges to test your ability to exploit GraphQL-specific vulnerabilities.
 * **Generic-University** by InsiderPhD: Simulating a university's API, [Generic-University](https://github.com/InsiderPhD/Generic-University) is a project that allows you to practice identifying and exploiting vulnerabilities in a more structured environment.
 * **vulnapi** by tkisason: [vulnapi](https://github.com/tkisason/vulnapi) is another valuable addition to your lab, offering a variety of API vulnerabilities to test your penetration testing skills against.
+* [http://testphp.vulnweb.com/](http://testphp.vulnweb.com/)
 
 ## Hacking APIs on TryHackMe and HackTheBox
 

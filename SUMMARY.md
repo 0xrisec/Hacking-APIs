@@ -9,6 +9,7 @@
   * [Passive Recon](discovering-apis/passive-recon.md)
   * [Active Recon](discovering-apis/active-recon.md)
   * [Craft rogue API docs](discovering-apis/craft-rogue-api-docs.md)
+  * [waybackurls](discovering-apis/waybackurls.md)
   * [Lab](discovering-apis/lab.md)
 * [Endpoint analysis](endpoint-analysis.md)
 * [Vulnerabilities](vulnerabilities/README.md)
