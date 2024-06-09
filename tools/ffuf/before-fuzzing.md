@@ -128,3 +128,5 @@ sqlmap -u "http://example.com/vulnerable_param" --dbs
 ```
 
 By following these steps, you can effectively identify the technologies used on a domain and select the appropriate payloads or wordlists for fuzzing.
+
+[http://ffuf.me/](http://ffuf.me/)

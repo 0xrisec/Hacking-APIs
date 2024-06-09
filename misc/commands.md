@@ -12,11 +12,8 @@ layout:
     visible: true
 ---
 
-# ffuf
-
-## Command
+# Commands
 
 ```
-ffuf -u http://ffuf.me/cd/FUZZ -w wordlist.txt -sa -of csv -mc 200 -o output.csv -fl 0 -c -recursion -recursion-depth 3 -v -p '1.0-2.0' -t 100 -rate 2
+ cat download_csv.csv | tr ',' ' ' | awk '$4 == "true" {print $1}' > valid-domains.txt
 ```
-
