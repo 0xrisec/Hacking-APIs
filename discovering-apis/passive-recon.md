@@ -108,7 +108,9 @@ The Pull Requests tab is a place that allows developers to collaborate on change
 
 ### AssetFinder
 
-&#x20;[https://github.com/tomnomnom/assetfinder](https://github.com/tomnomnom/assetfinder)
+&#x20;[https://github.com/tomnomnom/assetfinder](https://github.com/tomnomnom/assetfinder)\
+[https://github.com/projectdiscovery/katana](https://github.com/projectdiscovery/katana)\
+waybackurls
 
 ## Github dorks
 

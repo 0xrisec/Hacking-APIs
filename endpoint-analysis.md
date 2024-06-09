@@ -60,7 +60,7 @@ To import the specification, begin by launching Postman.
 
 ## Analyzing Functionality
 
-You’ll begin by using the API as it was intended. In the process, you’ll pay attention to the responses and their status codes and error messages. In particular, you’ll seek out functional- ity that interests you as an attacker, especially if there are indications of information disclosure, excessive data exposure, and other low-hanging vulnerabilities.
+You’ll begin by using the API as it was intended. In the process, you’ll pay attention to the responses and their status codes and error messages. In particular, you’ll seek out functionality that interests you as an attacker, especially if there are indications of information disclosure, excessive data exposure, and other low-hanging vulnerabilities.
 
 Look for endpoints that could provide you with sensitive information, requests that allow you to interact with resources, areas of the API that allow you to inject a payload, and administrative actions. Beyond that, look for any endpoint that allows you to upload your own payload and interact with resources.
 
@@ -82,9 +82,9 @@ My recommendation is to test these actions in several phases: first as an unau- 
 
 ### Analyzing API Responses
 
-One of the most basic skills you’ll need as an API hacker is the ability to analyze the responses you receive. This is initially done by issuing a request and review- ing the response status code, headers, and content included in the body.
+One of the most basic skills you’ll need as an API hacker is the ability to analyze the responses you receive. This is initially done by issuing a request and reviewing the response status code, headers, and content included in the body.
 
-First check that you are receiving the responses you expect. API docu- mentation can sometimes provide examples of what you could receive as a response. However, once you begin using the API in unintended ways, you will no longer know what you’ll get as a response, which is why it helps to first use the API as it was intended before moving into attack mode. Developing a sense of regular and irregular behavior will make vulnerabilities obvious.
+First check that you are receiving the responses you expect. API documentation can sometimes provide examples of what you could receive as a response. However, once you begin using the API in unintended ways, you will no longer know what you’ll get as a response, which is why it helps to first use the API as it was intended before moving into attack mode. Developing a sense of regular and irregular behavior will make vulnerabilities obvious.
 
 
 
