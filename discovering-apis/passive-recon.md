@@ -110,7 +110,9 @@ The Pull Requests tab is a place that allows developers to collaborate on change
 
 &#x20;[https://github.com/tomnomnom/assetfinder](https://github.com/tomnomnom/assetfinder)\
 [https://github.com/projectdiscovery/katana](https://github.com/projectdiscovery/katana)\
-waybackurls
+waybackurls\
+\
+Subdomain finder, give addition info: [https://www.vedbex.com/subdomain-finder/](https://www.vedbex.com/subdomain-finder/)
 
 ## Github dorks
 
