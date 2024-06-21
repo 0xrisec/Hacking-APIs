@@ -113,7 +113,9 @@ The Pull Requests tab is a place that allows developers to collaborate on change
 waybackurls\
 [https://pentest-tools.com/website-vulnerability-scanning/discover-hidden-directories-and-files](https://pentest-tools.com/website-vulnerability-scanning/discover-hidden-directories-and-files)\
 \
-Subdomain finder, give addition info: [https://www.vedbex.com/subdomain-finder/](https://www.vedbex.com/subdomain-finder/)
+Subdomain finder, give additional info: [https://www.vedbex.com/subdomain-finder/](https://www.vedbex.com/subdomain-finder/)\
+\
+JS: [https://medium.com/@kongsec/js-for-bug-bounties-2-0-extreme-edition-2024-f167fa48276a](https://medium.com/@kongsec/js-for-bug-bounties-2-0-extreme-edition-2024-f167fa48276a)
 
 ## Github dorks
 
