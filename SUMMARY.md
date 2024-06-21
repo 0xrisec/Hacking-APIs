@@ -52,6 +52,7 @@
     * [HS2562](misc/cryptography/hs2562.md)
     * [RS256](misc/cryptography/rs256.md)
   * [Commands](misc/commands.md)
+  * [XSS](misc/xss.md)
 * [Tools](tools/README.md)
   * [ffuf](tools/ffuf/README.md)
     * [Payloads](tools/ffuf/payloads.md)
