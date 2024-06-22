@@ -40,6 +40,8 @@
 * [Exploting Mass Assignment](exploting-mass-assignment/README.md)
   * [Finding Mass Assignment Targets](exploting-mass-assignment/finding-mass-assignment-targets.md)
   * [Discover Hidden HTTP Parameters](exploting-mass-assignment/discover-hidden-http-parameters.md)
+* [API Injection](api-injection/README.md)
+  * [XSS](api-injection/xss.md)
 * [AWS](aws.md)
 * [Writeups](writeups/README.md)
   * [Account Takeover on Booking.com](writeups/account-takeover-on-booking.com.md)
