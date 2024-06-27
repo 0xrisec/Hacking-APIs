@@ -82,6 +82,8 @@ Encoded Characters
 // input
 
 <input type="button" value="Click me" onclick="alert('XSS')">
+<input type="text" id="search-text" name="query" value="" onfocus="alert(1)" autofocus="" />
+
 ```
 
 ```
@@ -158,3 +160,11 @@ Break the code inside the quotation
 
 Depending on situation
 ```
+
+If JavaScript code sanitizes `<` and `>` characters, it indicates that it's trying to prevent HTML injection and potentially XSS attacks. However, there are ways attackers can still attempt XSS, such as using alternative encodings or bypassing the sanitizer logic. Here are a few techniques they might try:
+
+1. **Using Hex Encoding**: Instead of `<` and `>`, attackers might try using their hexadecimal equivalents (`%3C` for `<` and `%3E` for `>`). Some sanitizers may miss these encoded forms.
+2. **Using Unicode Encoding**: Attackers might use Unicode encoding to represent `<` and `>` characters. For example, `\u003C` for `<` and `\u003E` for `>`.
+3. **Using Alternative Tags**: Instead of `<script>` tags, attackers might try using alternative tags that the sanitizer may not detect as executable code. For example, `<img>` tags with JavaScript in the `src` attribute, or even uncommon HTML tags.
+4. **Event Handlers**: Attackers can try using event handlers like `onmouseover` or `onerror` to execute JavaScript code without directly injecting `<script>` tags.
+5. **CSS Injection**: Although less common, attackers might try injecting CSS code that includes JavaScript execution, such as using the `expression()` function in old versions of Internet Explorer.
