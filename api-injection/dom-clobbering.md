@@ -25,7 +25,7 @@ So you can clobber a global variable or property of an object and overwrite it w
 [https://bugology.intigriti.io/intigriti-monthly-challenges/0124](https://bugology.intigriti.io/intigriti-monthly-challenges/0124)\
 [https://challenge-0124.intigriti.io/](https://challenge-0124.intigriti.io/)\
 [https://github.com/SoheilKhodayari/TheThing](https://github.com/SoheilKhodayari/TheThing)\
-[https://domclob.xyz/domc\_wiki/techniques/windowNamedAccess.html](https://domclob.xyz/domc\_wiki/techniques/windowNamedAccess.html)\
+[https://domclob.xyz/domc\_wiki/techniques/windowNamedAccess.html](https://domclob.xyz/domc_wiki/techniques/windowNamedAccess.html)\
 [https://portswigger.net/web-security/dom-based/dom-clobbering](https://portswigger.net/web-security/dom-based/dom-clobbering)\
 [https://research.securitum.com/xss-in-amp4email-dom-clobbering/](https://research.securitum.com/xss-in-amp4email-dom-clobbering/)
 

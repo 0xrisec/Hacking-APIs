@@ -106,7 +106,7 @@ Facebook authenticates you and redirects you back to booking.com with a **code**
 
 _https://account.booking.com/social/result/facebook?code={code}\&state=\[large\_object]_
 
-Note that the code was passed to account.booking.com in a query parameter (**?**code=) instead of hash fragment (**#**token=) like the example of Randomsite.com. We will explain more on this issue later.
+Note that the code was passed to account.booking.com in a query parameter (**?**&#x63;ode=) instead of hash fragment (**#**&#x74;oken=) like the example of Randomsite.com. We will explain more on this issue later.
 
 **Steps 6-7:**
 
